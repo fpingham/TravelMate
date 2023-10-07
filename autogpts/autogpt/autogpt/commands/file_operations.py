@@ -25,7 +25,11 @@ from .file_operations_utils import read_textual_file
 
 logger = logging.getLogger(__name__)
 
-Operation = Literal["write", "append", "delete"]
+Operation = Literal[
+    "write", 
+    "append", 
+    # "delete"
+    ]
 
 
 def text_checksum(text: str) -> str:
