@@ -9,6 +9,8 @@ import json
 import time
 from itertools import islice
 
+import requests
+from bs4 import BeautifulSoup
 from duckduckgo_search import DDGS
 
 from autogpt.agents.agent import Agent
@@ -18,6 +20,25 @@ from autogpt.core.utils.json_schema import JSONSchema
 
 DUCKDUCKGO_MAX_ATTEMPTS = 3
 
+
+@command(
+  "fetch_webpage",
+  "Retrieve the content of a webpage",
+  {
+          "url": JSONSchema(
+            type=JSONSchema.Type.STRING,
+            description="The url to search for",
+            required=True)
+      },
+)
+
+def fetch_webpage(url: str, agent: Agent) -> str:
+    """Fetches a webpage"""
+    response = requests.get(url, timeout=5)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    all_text = soup.get_text()
+
+    return all_text[:15000]
 
 @command(
     "web_search",
