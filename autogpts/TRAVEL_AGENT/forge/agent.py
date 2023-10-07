@@ -83,23 +83,6 @@ class ForgeAgent(Agent):
         super().__init__(database, workspace)
 
         self.abilities = AbilityRegister(self)
-
-    @ability(
-        name="fetch_webpage",
-        description="Retrieve the content of a webpage",
-        parameters=[
-            {
-                "name": "url",
-                "description": "Webpage URL",
-                "type": "string",
-                "required": True,
-            }
-        ],
-        output_type="string",
-    )
-    async def fetch_webpage(agent, task_id: str, url: str) -> str:
-        response = requests.get(url)
-        return response.text
     
     async def create_task(self, task_request: TaskRequestBody) -> Task:
         """
@@ -180,7 +163,8 @@ class ForgeAgent(Agent):
         )
 
         # Set the step output to the "speak" part of the answer
-        step.output = answer["thoughts"]["speak"]
+        # step.output = answer["thoughts"]["speak"]
+        self.output = output
 
         # Return the completed step
         return step
