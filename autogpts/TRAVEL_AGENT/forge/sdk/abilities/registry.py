@@ -119,6 +119,7 @@ class AbilityRegister:
                     module = importlib.import_module(
                         f".{ability[:-3]}", package="forge.sdk.abilities"
                     )
+                    print(module)
                     for attr in dir(module):
                         func = getattr(module, attr)
                         if hasattr(func, "ability"):

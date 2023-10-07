@@ -83,6 +83,7 @@ class ForgeAgent(Agent):
         super().__init__(database, workspace)
 
         self.abilities = AbilityRegister(self)
+        # print(self.abilities)
     
     async def create_task(self, task_request: TaskRequestBody) -> Task:
         """
@@ -113,7 +114,6 @@ class ForgeAgent(Agent):
 
         # Initialize the PromptEngine with the "gpt-3.5-turbo" model
         prompt_engine = PromptEngine("gpt-3.5-turbo")
-
         # Load the system and task prompts
         system_prompt = prompt_engine.load_prompt("system-format")
 
