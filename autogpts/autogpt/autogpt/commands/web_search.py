@@ -41,20 +41,20 @@ DUCKDUCKGO_MAX_ATTEMPTS = 3
 
 @command(
   "fetch_webpage",
-  "Retrieve the relevant content of a webpage related to specific topic",
+  "Retrieve the relevant content of a webpage related to specific question",
   {
         "url": JSONSchema(
             type=JSONSchema.Type.STRING,
             description="The url to search for",
             required=True),
-        "topic": JSONSchema(
+        "question": JSONSchema(
             type=JSONSchema.Type.STRING,
-            description="The type of information you want to extract from this url",
+            description="The question you want to answer using this url",
             required=True)
     },
 )
 
-def fetch_webpage(topic: str, url: str, agent: Agent) -> str:
+def fetch_webpage(question: str, url: str, agent: Agent) -> str:
     """Fetches a webpage"""
     # response = requests.get(url, timeout=5)
     # soup = BeautifulSoup(response.text, 'html.parser')
@@ -63,9 +63,10 @@ def fetch_webpage(topic: str, url: str, agent: Agent) -> str:
     # print(all_text)
 
     loader = WebBaseLoader(url, header_template = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
-    url_text = loader.load()  
+    url_text = loader.load()
     text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
-    chunk_size=3000, chunk_overlap=0
+    chunk_size=3000,
+    chunk_overlap=0
     )
 
     print(url_text)
@@ -75,8 +76,8 @@ def fetch_webpage(topic: str, url: str, agent: Agent) -> str:
     llm = ChatOpenAI(temperature=0)
     chain = load_summarize_chain(llm, chain_type="refine")
 
-    chain.initial_llm_chain.prompt.template = 'From the following snippet, extract only the relevant aspects for' + topic + '\n\n\n"{text}"\n\n\nRELEVANT SNIPPETS:'
-    chain.refine_llm_chain.prompt.template = "Your job is to produce a final collection of relevant snippets.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY the snippets relevant for " + topic + "\nIf the context isn't useful, return the original summary."
+    chain.initial_llm_chain.prompt.template = 'From the following snippet, extract only the relevant aspects for' + question + '\n\n\n"{text}"\n\n\nRELEVANT SNIPPETS:'
+    chain.refine_llm_chain.prompt.template = "Your job is to produce a final collection of relevant snippets.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY the snippets relevant for " + question + "\nIf the context isn't useful, return the original summary."
 
     res = chain.run(split_docs[:6])
 
