@@ -185,8 +185,6 @@ class BaseAgent(Configurable[BaseAgentSettings], ABC):
 
     @property
     def send_token_limit(self) -> int:
-        print('llm and max tokens for the peeeps!!')
-        print(self.llm, self.llm.max_tokens)
         return self.config.send_token_limit or self.llm.max_tokens * 3 // 4
 
     async def propose_action(self) -> ThoughtProcessOutput:
