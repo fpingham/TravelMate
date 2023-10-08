@@ -3,8 +3,6 @@ DEFAULT_TRIGGERING_PROMPT = (
     Determine exactly one command to use next based on the given goals
     and the progress you have made so far,
     and respond using the JSON schema specified previously.
-
-    You should ALWAYS start by reading the 'travel_details.pdf' file.
         
     If doing a web search, you should strive to make it as directed as possible. Here are some guidelines to get the best results:
     - If you want to search for events, consider searching for 'eventbrite' links
