@@ -19,6 +19,8 @@ Goals:
 - Understand and solve user's concerns / interests in the trip
 - Important facts/considerations for someone visiting Argentina (from blogs)
 - Interesting venues to visit in Buenos Aires during the trip's dates
+- Provide custom assistance based on files provided by the user.
+- Always start by reading trip_details.pdf
 """
 
 # - Interesting venues to visit
@@ -32,6 +34,7 @@ Goals:
 DEFAULT_TASK_PROMPT_AICONFIG_AUTOMATIC = (
     "Task: '{{user_prompt}}'\n"
     "Respond only with the output in the exact format specified in the system prompt, with no explanation or conversation.\n"
+    "Always start by reading trip_details.pdf and any other file in dir."
     "MAKE SURE you include all of the keys in your output AS SPECIFIED in the system prompt."
 )
 

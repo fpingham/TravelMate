@@ -9,6 +9,8 @@ DEFAULT_TRIGGERING_PROMPT = (
     If doing a web search, you should choose the most promising results among the retrieved urls, using the search result body and title as reference.
     Also pay attention to the set goals and make sure your question is directly related to one of your goals
     You should ALWAYS base your responses on knowledge that you obtain from either
+    You must ALWAYS start by loading the files that you have available in the directory.
+    Try loading trip_details.pdf and tourist_profile.txt or any other file as well.
     user provided documents or the web:
     """
 )
