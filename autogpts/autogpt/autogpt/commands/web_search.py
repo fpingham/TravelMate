@@ -41,16 +41,20 @@ DUCKDUCKGO_MAX_ATTEMPTS = 3
 
 @command(
   "fetch_webpage",
-  "Retrieve the content of a webpage",
+  "Retrieve the relevant content of a webpage related to specific topic",
   {
-          "url": JSONSchema(
+        "url": JSONSchema(
             type=JSONSchema.Type.STRING,
             description="The url to search for",
+            required=True),
+        "topic": JSONSchema(
+            type=JSONSchema.Type.STRING,
+            description="The type of information you want to extract from this url",
             required=True)
-      },
+    },
 )
 
-def fetch_webpage(url: str, agent: Agent) -> str:
+def fetch_webpage(query: str, url: str, agent: Agent) -> str:
     """Fetches a webpage"""
     # response = requests.get(url, timeout=5)
     # soup = BeautifulSoup(response.text, 'html.parser')
@@ -58,20 +62,25 @@ def fetch_webpage(url: str, agent: Agent) -> str:
 
     # print(all_text)
 
-    loader = WebBaseLoader(url)
+    loader = WebBaseLoader(url, header_template = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
     url_text = loader.load()  
     text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
     chunk_size=3000, chunk_overlap=0
     )
+
+    print(url_text)
+
     split_docs = text_splitter.split_documents(url_text)
 
     llm = ChatOpenAI(temperature=0)
     chain = load_summarize_chain(llm, chain_type="refine")
 
-    chain.initial_llm_chain.prompt.template = 'Write a summary of the following, metioning ONLY on the most relevant/pressing aspects for someone looking to visit the country:\n\n\n"{text}"\n\n\nCONCISE SUMMARY:'
-    chain.refine_llm_chain.prompt.template = "Your job is to produce a final summary.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY on the most relevant/pressing aspects for someone looking to visit the country\nIf the context isn't useful, return the original summary."
+    chain.initial_llm_chain.prompt.template = 'From the following snippet, extract only the relevant aspects for' + query + '\n\n\n"{text}"\n\n\nRELEVANT SNIPPETS:'
+    chain.refine_llm_chain.prompt.template = "Your job is to produce a final collection of relevant snippets.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY the snippets relevant for " + query + "\nIf the context isn't useful, return the original summary."
 
-    res = chain.run(split_docs[:4])
+    res = chain.run(split_docs[:6])
+
+    print(res)
 
     # encoding = tiktoken.encoding_for_model("gpt-3.5-turbo-16k")
     # res = encoding.encode(all_text.choices[0].text)
@@ -89,11 +98,11 @@ def fetch_webpage(url: str, agent: Agent) -> str:
             type=JSONSchema.Type.STRING,
             description="The search query",
             required=True,
-        )
+        ),
     },
     aliases=["search"],
 )
-def web_search(query: str, agent: Agent, num_results: int = 3) -> str:
+def web_search(query: str, agent: Agent, num_results: int = 6) -> str:
     """Return the results of a Google search
 
     Args:
