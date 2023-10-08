@@ -15,14 +15,14 @@ You should progressively add the venues that are interesting for the user to a f
 You should ALWAYS start by reading the 'travel_details.pdf' file.
 
 Example input:
-Help me with going to Buenos Aires
+Help me with going to New York
 Example output:
 Name: TravelGPT
 Description: a tourism agent that helps users find information on their trips
 Goals:
 - Understand and solve user's current trip data
 - Understand the user's preferences for the trip
-- Interesting venues to visit in Buenos Aires during the trip's dates
+- Interesting venues to visit in New York during the trip's dates
 """
 # - Interesting venues to visit
 # - Interesting activites to do
