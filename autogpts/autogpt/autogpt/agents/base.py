@@ -49,7 +49,7 @@ AgentThoughts = dict[str, Any]
 
 class BaseAgentConfiguration(SystemConfiguration):
     fast_llm: OpenAIModelName = UserConfigurable(default=OpenAIModelName.GPT3_16k)
-    smart_llm: OpenAIModelName = UserConfigurable(default=OpenAIModelName.GPT4)
+    smart_llm: OpenAIModelName = UserConfigurable(default=OpenAIModelName.GPT4_32k)
     use_functions_api: bool = UserConfigurable(default=False)
 
     default_cycle_instruction: str = DEFAULT_TRIGGERING_PROMPT
@@ -185,6 +185,8 @@ class BaseAgent(Configurable[BaseAgentSettings], ABC):
 
     @property
     def send_token_limit(self) -> int:
+        print('llm and max tokens for the peeeps!!')
+        print(self.llm, self.llm.max_tokens)
         return self.config.send_token_limit or self.llm.max_tokens * 3 // 4
 
     async def propose_action(self) -> ThoughtProcessOutput:

@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING, Optional
 
 if TYPE_CHECKING:
     from autogpt.config import Config
-    from autogpt.memory.vector import VectorMemory
+    from autogpt.memory.vector import VectorMemory, JSONFileMemory
     from autogpt.models.command_registry import CommandRegistry
 
 from autogpt.config import AIConfig
@@ -207,6 +207,8 @@ class Agent(
         user_input: str = "",
     ) -> ActionResult:
         result: ActionResult
+
+        print(self.memory)
 
         if command_name == "human_feedback":
             result = ActionInterruptedByHuman(feedback=user_input)

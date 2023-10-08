@@ -22,6 +22,8 @@ ENV PIP_NO_CACHE_DIR=yes \
     POETRY_VIRTUALENVS_IN_PROJECT=0 \
     POETRY_NO_INTERACTION=1
 
+RUN pip install langchain
+
 # Install and configure Poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH="$POETRY_HOME/bin:$PATH"
@@ -29,6 +31,8 @@ RUN poetry config installer.max-workers 10
 
 WORKDIR /app
 COPY pyproject.toml poetry.lock ./
+
+RUN pip install langchain
 
 # Set the entrypoint
 ENTRYPOINT ["poetry", "run", "autogpt", "--install-plugin-deps"]

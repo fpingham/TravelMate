@@ -1,0 +1,132 @@
+From Wikipedia, the free encyclopedia
+"Apple (company)" redirects here. For other companies with the same name, see Apple (disambiguation) § Businesses and organisations.
+Apple Inc.
+
+
+Apple Park, the company's headquarters in Cupertino, California, within Silicon Valley
+Formerly	
+Apple Computer Company (1976–1977)
+Apple Computer, Inc.
+(1977–2007)
+Type	Public
+Traded as	
+Nasdaq: AAPL
+Nasdaq-100 component
+DJIA component
+S&P 100 component
+S&P 500 component
+ISIN	US0378331005
+Industry	
+Consumer electronics
+Software services
+Online services
+Founded	April 1, 1976; 47 years ago in Los Altos, California, U.S.
+Founders	
+Steve Jobs
+Steve Wozniak
+Ronald Wayne
+Headquarters	1 Apple Park Way, Cupertino, California, U.S.
+Number of locations	526 retail stores (2023)
+Area served	Worldwide
+Key people	
+Arthur D. Levinson (chairman)
+Tim Cook (CEO)
+Jeff Williams (COO)
+Luca Maestri (CFO)
+Products	
+AirPods
+Apple Watch
+iPad
+iPhone
+Mac
+Full list
+Services	
+App Store
+Apple Card
+Apple One
+Apple Pay
+Revenue	Increase US$394.33 billion (2022)
+Operating income	Increase US$119.44 billion (2022)
+Net income	Increase US$99.80 billion (2022)
+Total assets	Increase US$352.76 billion (2022)
+Total equity	Decrease US$50.67 billion (2022)
+Number of employees	164,000 (2022)
+Subsidiaries	
+Apple Studios
+Beats Electronics
+Beddit
+Braeburn Capital
+Claris
+Drive.ai
+InVisage Technologies
+Website	apple.com Edit this at Wikidata
+Footnotes / references
+[1][2][3][4][5]
+Apple Inc. is an American multinational technology company headquartered in Cupertino, California. As of March 2023, Apple is the world's biggest company by market capitalization,[6] and with US$394.3 billion the largest technology company by 2022 revenue.[7] As of June 2022, Apple is the fourth-largest personal computer vendor by unit sales; the largest manufacturing company by revenue; and the second-largest mobile phone manufacturer in the world. It is considered one of the Big Five American information technology companies, alongside Alphabet (parent company of Google), Amazon, Meta Platforms, and Microsoft.
+
+Apple was founded as Apple Computer Company on April 1, 1976, by Steve Wozniak, Steve Jobs (1955–2011) and Ronald Wayne to develop and sell Wozniak's Apple I personal computer. It was incorporated by Jobs and Wozniak as Apple Computer, Inc. in 1977. The company's second computer, the Apple II, became a best seller and one of the first mass-produced microcomputers. Apple went public in 1980 to instant financial success. The company developed computers featuring innovative graphical user interfaces, including the 1984 original Macintosh, announced that year in a critically acclaimed advertisement called "1984". By 1985, the high cost of its products, and power struggles between executives, caused problems. Wozniak stepped back from Apple and pursued other ventures, while Jobs resigned and founded NeXT, taking some Apple employees with him.
+
+As the market for personal computers expanded and evolved throughout the 1990s, Apple lost considerable market share to the lower-priced duopoly of the Microsoft Windows operating system on Intel-powered PC clones (also known as "Wintel"). In 1997, weeks away from bankruptcy, the company bought NeXT to resolve Apple's unsuccessful operating system strategy and entice Jobs back to the company. Over the next decade, Jobs guided Apple back to profitability through a number of tactics including introducing the iMac, iPod, iPhone and iPad to critical acclaim, launching the "Think different" campaign and other memorable advertising campaigns, opening the Apple Store retail chain, and acquiring numerous companies to broaden the company's product portfolio. When Jobs resigned in 2011 for health reasons, and died two months later, he was succeeded as CEO by Tim Cook.
+
+Apple became the first publicly traded U.S. company to be valued at over $1 trillion in August 2018, then at $2 trillion in August 2020, and at $3 trillion in January 2022. In June 2023, it was valued at just over $3 trillion.[8] The company receives criticism regarding the labor practices of its contractors, its environmental practices, and its business ethics, including anti-competitive practices and materials sourcing. Nevertheless, the company has a large following and enjoys a high level of brand loyalty. It has also been consistently ranked as one of the world's most valuable brands.
+
+History
+Main article: History of Apple Inc.
+1976–1980: Founding and incorporation
+See also: History of Apple Inc. § 1971–1985: Jobs and Wozniak
+
+In 1976, Steve Jobs co-founded Apple in his parents' home on Crist Drive in Los Altos, California.[9] Although it is widely believed that the company was founded in the house's garage, Apple co-founder Steve Wozniak called it "a bit of a myth".[10] Jobs and Wozniak did, however, move some operations to the garage when the bedroom became too crowded.[11]
+
+Apple's first product, the Apple I, designed by Steve Wozniak, was sold as an assembled circuit board and lacked basic features such as a keyboard, monitor, and case. The owner of this unit added a keyboard and wooden case.
+
+The Apple II Plus, introduced in 1979, designed primarily by Wozniak
+Apple Computer Company was founded on April 1, 1976, by Steve Jobs, Steve Wozniak, and Ronald Wayne as a partnership.[9][12] The company's first product was the Apple I, a computer designed and hand-built entirely by Wozniak.[13] To finance its creation, Jobs sold his Volkswagen Bus, and Wozniak sold his HP-65 calculator.[14]: 57 [a] Wozniak debuted the first prototype Apple I at the Homebrew Computer Club in July 1976.[15] The Apple I was sold as a motherboard with CPU, RAM, and basic textual-video chips—a base kit concept which would not yet be marketed as a complete personal computer.[16] It went on sale soon after debut for US$666.66 (equivalent to $3,428 in 2022).[17][18]: 180  Wozniak later said he was unaware of the coincidental mark of the beast in the number 666, and that he came up with the price because he liked "repeating digits".[19]
+
+Apple Computer, Inc. was incorporated on January 3, 1977,[20][21] without Wayne, who had left and sold his share of the company back to Jobs and Wozniak for $800 only twelve days after having co-founded Apple.[22] Multimillionaire Mike Markkula provided essential business expertise and funding of US$250,000 (equivalent to $1,207,304 in 2022) to Jobs and Wozniak during the incorporation of Apple.[23] During the first five years of operations, revenues grew exponentially, doubling about every four months. Between September 1977 and September 1980, yearly sales grew from $775,000 to $118 million, an average annual growth rate of 533%.[24]
+
+The Apple II, also invented by Wozniak, was introduced on April 16, 1977, at the first West Coast Computer Faire.[25] It differed from its major rivals, the TRS-80 and Commodore PET, because of its character cell-based color graphics and open architecture. While the Apple I and early Apple II models used ordinary audio cassette tapes as storage devices, they were superseded by the introduction of a 5+1⁄4-inch floppy disk drive and interface called the Disk II in 1978.[26][27]
+
+The Apple II was chosen to be the desktop platform for the first "killer application" of the business world: VisiCalc, a spreadsheet program released in 1979.[26] VisiCalc created a business market for the Apple II and gave home users an additional reason to buy an Apple II: compatibility with the office,[26] but Apple II market share remained behind home computers made by competitors such as Atari, Commodore, and Tandy.[28][29]
+
+On December 12, 1980, Apple (ticker symbol "AAPL") went public selling 4.6 million shares at $22 per share ($.10 per share when adjusting for stock splits as of September 3, 2022),[21] generating over $100 million, which was more capital than any IPO since Ford Motor Company in 1956.[30] By the end of the day, 300 millionaires were created, from a stock price of $29 per share[31] and a market cap of $1.778 billion.[30][31]
+
+1980–1990: Success with Macintosh
+See also: List of Mac models and Timeline of the Apple II family
+
+The Macintosh, released in 1984, is the first mass-market personal computer to feature an integral graphical user interface and mouse.
+A critical moment in the company's history came in December 1979 when Jobs and several Apple employees, including human–computer interface expert Jef Raskin, visited Xerox PARC in to see a demonstration of the Xerox Alto, a computer using a graphical user interface. Xerox granted Apple engineers three days of access to the PARC facilities in return for the option to buy 100,000[32] shares (22.4 million split-adjusted shares as of September 3, 2022)[21] of Apple at the pre-IPO price of $10 a share.[33] After the demonstration, Jobs was immediately convinced that all future computers would use a graphical user interface, and development of a GUI began for the Apple Lisa, named after Jobs's daughter.[34]
+
+The Lisa division would be plagued by infighting, and in 1982 Jobs was pushed off the project. The Lisa launched in 1983 and became the first personal computer sold to the public with a GUI, but was a commercial failure due to its high price and limited software titles.[35]
+
+Jobs, angered by being pushed off the Lisa team, took over the company's Macintosh division. Wozniak and Raskin had envisioned the Macintosh as a low-cost computer with a text-based interface like the Apple II, but a plane crash in 1981 forced Wozniak to step back from the project. Jobs quickly redefined the Macintosh as a graphical system that would be cheaper than the Lisa, undercutting his former division.[36] Jobs was also hostile to the Apple II division, which at the time, generated most of the company's revenue.[37]
+
+In 1984, Apple launched the Macintosh, the first personal computer to be sold without a programming language.[38] Its debut was signified by "1984", a $1.5 million television advertisement directed by Ridley Scott that aired during the third quarter of Super Bowl XVIII on January 22, 1984.[39] This is now hailed as a watershed event for Apple's success[40] and was called a "masterpiece" by CNN[41] and one of the greatest TV advertisements of all time by TV Guide.[42]
+
+The advertisement created great interest in the original Macintosh, and sales were initially good, but began to taper off dramatically after the first three months as reviews started to come in. Jobs had made the decision to equip the original Macintosh with 128 kilobytes of RAM, attempting to reach a US$1,000 (equivalent to $2,817 in 2022) price point, which limited its speed and the software that could be used. The Macintosh would eventually ship for US$2,495 (equivalent to $7,028 in 2022), a price panned by critics in light of its slow performance.[43]: 195  In early 1985, this sales slump triggered a power struggle between Steve Jobs and CEO John Sculley, who had been hired away from Pepsi two years earlier by Jobs[44] saying, "Do you want to sell sugar water for the rest of your life or come with me and change the world?"[45] Sculley decided to remove Jobs as the head of the Macintosh division, with unanimous support from the Apple board of directors.[46]
+
+The board of directors instructed Sculley to contain Jobs and his ability to launch expensive forays into untested products. Rather than submit to Sculley's direction, Jobs attempted to oust him from his leadership role at Apple.[47] Informed by Jean-Louis Gassée, Sculley found out that Jobs had been attempting to organize a boardroom coup and called an emergency meeting at which Apple's executive staff sided with Sculley and stripped Jobs of all operational duties.[47] Jobs resigned from Apple in September 1985 and took a number of Apple employees with him to found NeXT.[48] Wozniak had also quit his active employment at Apple earlier in 1985 to pursue other ventures, expressing his frustration with Apple's treatment of the Apple II division and stating that the company had "been going in the wrong direction for the last five years."[37][49][50] Despite Wozniak's grievances, he officially remained employed by Apple, and to this day continues to work for the company as a representative,[49] receiving a stipend estimated to be $120,000 per year for this role.[18] Both Jobs and Wozniak remained Apple shareholders after their departures.[51]
+
+After the departures of Jobs and Wozniak, Sculley worked to improve the Macintosh in 1985 by quadrupling the RAM and introducing the LaserWriter, the first reasonably priced PostScript laser printer. PageMaker, an early desktop publishing application taking advantage of the PostScript language, was also released by Aldus Corporation in July 1985.[52] It has been suggested that the combination of Macintosh, LaserWriter and PageMaker was responsible for the creation of the desktop publishing market.[53]
+
+This dominant position in the desktop publishing market[54] allowed the company to focus on higher price points, the so-called "high-right policy" named for the position on a chart of price vs. profits. Newer models selling at higher price points offered higher profit margin, and appeared to have no effect on total sales as power users snapped up every increase in speed. Although some worried about pricing themselves out of the market, the high-right policy was in full force by the mid-1980s, notably due to Jean-Louis Gassée's mantra of "fifty-five or die", referring to the 55% profit margins of the Macintosh II.[55]: 79–80 
+
+This policy began to backfire in the last years of the decade as desktop publishing programs appeared on PC clones that offered some or much of the same functionality of the Macintosh, but at far lower price points. The company lost its dominant position in the desktop publishing market and estranged many of its original consumer customer base who could no longer afford their high-priced products. The Christmas season of 1989 was the first in the company's history to have declining sales, which led to a 20% drop in Apple's stock price.[55]: 117–129  During this period, the relationship between Sculley and Gassée deteriorated, leading Sculley to effectively demote Gassée in January 1990 by appointing Michael Spindler as the chief operating officer.[56] Gassée left the company later that year.[57]
+
+1990–1997: Decline and restructuring
+The company pivoted strategy and in October 1990 introduced three lower-cost models, the Macintosh Classic, the Macintosh LC, and the Macintosh IIsi, all of which saw significant sales due to pent-up demand.[58] In 1991, Apple introduced the hugely successful PowerBook with a design that set the current shape for almost all modern laptops. The same year, Apple introduced System 7, a major upgrade to the Macintosh operating system, adding color to the interface and introducing new networking capabilities.
+
+The success of the lower-cost Macs and PowerBook brought increasing revenue.[59] For some time, Apple was doing incredibly well, introducing fresh new products and generating increasing profits in the process. The magazine MacAddict named the period between 1989 and 1991 as the "first golden age" of the Macintosh.[60]
+
+
+The PenLite is Apple's first prototype of a tablet computer. Created in 1992, the project was designed to bring the Mac OS to a tablet – but was canceled in favor of the Newton.[61]
+The success of Apple's lower-cost consumer models, especially the LC, also led to the cannibalization of their higher-priced machines. To address this, management introduced several new brands, selling largely identical machines at different price points, aimed at different markets: the high-end Quadra models, the mid-range Centris line, and the consumer-marketed Performa series. This led to significant market confusion, as customers did not understand the difference between models.[62]
+
+The early 1990s also saw the discontinuation of the Apple II series, which was expensive to produce, and the company felt was still taking sales away from lower-cost Macintosh models. After the launch of the LC, Apple began encouraging developers to create applications for Macintosh rather than Apple II, and authorized salespersons to direct consumers towards Macintosh and away from Apple II.[63] The Apple IIe was discontinued in 1993.[64]
+
+Throughout this period, Microsoft continued to gain market share with its Windows graphical user interface that it sold to manufacturers of generally less expensive PC clones. While the Macintosh was more expensive, it offered a more tightly integrated user experience, but the company struggled to make the case to consumers.
+
+Apple also experimented with a number of other unsuccessful consumer targeted products during the 1990s, including digital cameras, portable CD audio players, speakers, video game consoles, the eWorld online service, and TV appliances. Most notably, enormous resources were invested in the problem-plagued Newton tablet division, based on John Sculley's unrealistic market forecasts.[65]
+
+Throughout this period, Microsoft continued to gain market share with Windows by focusing on delivering software to inexpensive personal computers, while Apple was delivering a richly engineered but expensive experience.[66] Apple relied on high profit margins and never developed a clear response; instead, they sued Microsoft for using a GUI similar to the Apple Lisa in Apple Computer, Inc. v. Microsoft Corp.[67] The lawsuit dragged on for years before it was finally dismissed.
+
+The major product flops and the rapid loss of market share to Windows sullied Apple's reputation, and in 1993 Sculley was replaced as CEO by Michael Spindler.[68]

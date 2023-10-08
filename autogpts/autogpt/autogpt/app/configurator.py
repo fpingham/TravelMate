@@ -180,4 +180,4 @@ def check_model(
     logger.warn(
         f"You do not have access to {model_name}. Setting {model_type} to gpt-3.5-turbo."
     )
-    return "gpt-3.5-turbo"
+    return "gpt-3.5-turbo-16k"

@@ -45,6 +45,7 @@ class OpenAIModelName(str, enum.Enum):
     ADA = "text-embedding-ada-002"
 
     GPT3_v1 = "gpt-3.5-turbo-0301"
+    GPT3_v1_16k = "gpt-3.5-turbo-16k-0301"
     GPT3_v2 = "gpt-3.5-turbo-0613"
     GPT3_v2_16k = "gpt-3.5-turbo-16k-0613"
     GPT3_ROLLING = "gpt-3.5-turbo"
@@ -120,6 +121,7 @@ chat_model_mapping = {
     OpenAIModelName.GPT3: [OpenAIModelName.GPT3_v1, OpenAIModelName.GPT3_v2],
     OpenAIModelName.GPT3_16k: [OpenAIModelName.GPT3_v2_16k],
     OpenAIModelName.GPT4: [OpenAIModelName.GPT4_v1, OpenAIModelName.GPT4_v2],
+    # OpenAIModelName.GPT4: [OpenAIModelName.GPT4_v1_32k, OpenAIModelName.GPT4_v2_32k],
     OpenAIModelName.GPT4_32k: [
         OpenAIModelName.GPT4_v1_32k,
         OpenAIModelName.GPT4_v2_32k,

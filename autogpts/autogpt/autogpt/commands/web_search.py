@@ -5,13 +5,31 @@ from __future__ import annotations
 COMMAND_CATEGORY = "web_search"
 COMMAND_CATEGORY_TITLE = "Web Search"
 
+import subprocess
+
+# Specify the library name you want to install
+library_name = "langchain"
+
+# Use subprocess to run the installation command
+try:
+    subprocess.check_call(["pip", "install", library_name])
+    print(f"Successfully installed {library_name}")
+except subprocess.CalledProcessError as e:
+    print(f"Error installing {library_name}: {e}")
+    
 import json
 import time
 from itertools import islice
 
+import openai
 import requests
+import tiktoken
 from bs4 import BeautifulSoup
 from duckduckgo_search import DDGS
+from langchain.chains.summarize import load_summarize_chain
+from langchain.chat_models import ChatOpenAI
+from langchain.document_loaders import WebBaseLoader
+from langchain.text_splitter import CharacterTextSplitter
 
 from autogpt.agents.agent import Agent
 from autogpt.agents.utils.exceptions import ConfigurationError
@@ -34,11 +52,31 @@ DUCKDUCKGO_MAX_ATTEMPTS = 3
 
 def fetch_webpage(url: str, agent: Agent) -> str:
     """Fetches a webpage"""
-    response = requests.get(url, timeout=5)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    all_text = soup.get_text()
+    # response = requests.get(url, timeout=5)
+    # soup = BeautifulSoup(response.text, 'html.parser')
+    # all_text = soup.get_text()
 
-    return all_text[:15000]
+    # print(all_text)
+
+    loader = WebBaseLoader(url)
+    url_text = loader.load()  
+    text_splitter = CharacterTextSplitter.from_tiktoken_encoder(
+    chunk_size=3000, chunk_overlap=0
+    )
+    split_docs = text_splitter.split_documents(url_text)
+
+    llm = ChatOpenAI(temperature=0)
+    chain = load_summarize_chain(llm, chain_type="refine")
+
+    res = chain.run(split_docs[:3])
+
+    # encoding = tiktoken.encoding_for_model("gpt-3.5-turbo-16k")
+    # res = encoding.encode(all_text.choices[0].text)
+    # print('Number of tokens!!!')
+    # print(len(res))
+    # # import ipdb; ipdb.set_trace()
+
+    return res
 
 @command(
     "web_search",
@@ -52,7 +90,7 @@ def fetch_webpage(url: str, agent: Agent) -> str:
     },
     aliases=["search"],
 )
-def web_search(query: str, agent: Agent, num_results: int = 8) -> str:
+def web_search(query: str, agent: Agent, num_results: int = 3) -> str:
     """Return the results of a Google search
 
     Args:
