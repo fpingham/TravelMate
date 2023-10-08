@@ -54,7 +54,7 @@ DUCKDUCKGO_MAX_ATTEMPTS = 3
     },
 )
 
-def fetch_webpage(query: str, url: str, agent: Agent) -> str:
+def fetch_webpage(topic: str, url: str, agent: Agent) -> str:
     """Fetches a webpage"""
     # response = requests.get(url, timeout=5)
     # soup = BeautifulSoup(response.text, 'html.parser')
@@ -75,8 +75,8 @@ def fetch_webpage(query: str, url: str, agent: Agent) -> str:
     llm = ChatOpenAI(temperature=0)
     chain = load_summarize_chain(llm, chain_type="refine")
 
-    chain.initial_llm_chain.prompt.template = 'From the following snippet, extract only the relevant aspects for' + query + '\n\n\n"{text}"\n\n\nRELEVANT SNIPPETS:'
-    chain.refine_llm_chain.prompt.template = "Your job is to produce a final collection of relevant snippets.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY the snippets relevant for " + query + "\nIf the context isn't useful, return the original summary."
+    chain.initial_llm_chain.prompt.template = 'From the following snippet, extract only the relevant aspects for' + topic + '\n\n\n"{text}"\n\n\nRELEVANT SNIPPETS:'
+    chain.refine_llm_chain.prompt.template = "Your job is to produce a final collection of relevant snippets.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY the snippets relevant for " + topic + "\nIf the context isn't useful, return the original summary."
 
     res = chain.run(split_docs[:6])
 

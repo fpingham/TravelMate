@@ -14,7 +14,7 @@ Example output:
 Name: TravelGPT
 Description: a tourist agent that helps users find information on their trips
 Goals:
-- Travel considerations (not government, more general like blogs from other travellers) involved when travelling to Buenos Aires
+- Useful facts/considerations about visiting the city (not government, more general like blogs from other travellers) involved when travelling to Buenos Aires
 """
 
 # - Budget, dates and other details (should ask user)
@@ -24,6 +24,7 @@ Goals:
 DEFAULT_TASK_PROMPT_AICONFIG_AUTOMATIC = (
     "Task: '{{user_prompt}}'\n"
     "Respond only with the output in the exact format specified in the system prompt, with no explanation or conversation.\n"
+    "Make sure you include 'speak' in your ouptut as specified in the system prompt."
 )
 
 DEFAULT_USER_DESIRE_PROMPT = "Write a wikipedia style article about the project: https://github.com/significant-gravitas/AutoGPT"  # Default prompt
