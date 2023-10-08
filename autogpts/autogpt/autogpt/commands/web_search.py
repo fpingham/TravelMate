@@ -16,7 +16,7 @@ try:
     print(f"Successfully installed {library_name}")
 except subprocess.CalledProcessError as e:
     print(f"Error installing {library_name}: {e}")
-    
+
 import json
 import time
 from itertools import islice
@@ -68,7 +68,10 @@ def fetch_webpage(url: str, agent: Agent) -> str:
     llm = ChatOpenAI(temperature=0)
     chain = load_summarize_chain(llm, chain_type="refine")
 
-    res = chain.run(split_docs[:3])
+    chain.initial_llm_chain.prompt.template = 'Write a summary of the following, metioning ONLY on the most relevant/pressing aspects for someone looking to visit the country:\n\n\n"{text}"\n\n\nCONCISE SUMMARY:'
+    chain.refine_llm_chain.prompt.template = "Your job is to produce a final summary.\nWe have provided an existing summary up to a certain point: {existing_answer}\nWe have the opportunity to refine the existing summary (only if needed) with some more context below.\n------------\n{text}\n------------\nGiven the new context, refine the original summary, metioning ONLY on the most relevant/pressing aspects for someone looking to visit the country\nIf the context isn't useful, return the original summary."
+
+    res = chain.run(split_docs[:4])
 
     # encoding = tiktoken.encoding_for_model("gpt-3.5-turbo-16k")
     # res = encoding.encode(all_text.choices[0].text)
